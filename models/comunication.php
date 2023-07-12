@@ -1,9 +1,9 @@
 <?php 
     class Comunicazione {
-        protected $titolo;
-        protected $mittente;
-        protected $messaggio;
-        protected $destinatari;
+        private $titolo;
+        private $mittente;
+        private $messaggio;
+        private $destinatari;
 
         public function __construct($titolo, $mittente, $messaggio, $destinatari){
             $this->mittente = $mittente;
@@ -12,5 +12,4 @@
             $this->destinatari = $destinatari;
         }
     }
-
 ?>
