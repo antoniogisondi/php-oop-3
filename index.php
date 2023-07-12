@@ -36,10 +36,11 @@
 
     // STAMPO A SCHERMO LE ISTANZE DELLA CLASSE SMS
     $sms = new SMS('Antonio', 'Francesco', 'Titolo dell\' SMS', 'Contenuto dell\' SMS', true, false);
-    echo "Mittente: ".$sms->getMittente()."<br/>";
-    echo "Destinatario: ".$sms->getDestinatario()."<br/>";
-    echo "Titolo: ".$sms->getTitolo()."<br/>";
+    echo "Da ".$sms->getMittente()."<br/>";
+    echo "a ".$sms->getDestinatario()."<br/>";
+    echo $sms->getTitolo()."<br/>";
     echo "Messaggio: ".$sms->getMessaggio()."<br/>";
+    echo $sms->invio()."<br/>";
     if($sms->getNotificaLettura()){
         echo 'Il messaggio è stato visualizzato <br/>';
     }
@@ -55,6 +56,19 @@
     }
 
     echo "<hr/>";
+
+    $notify = new Notifiche_PUSH('Antonio', 'Instagram', 'Titolo della notifica', 'Contenuto della notifica', false, 'Icona della notifica');
+    echo $notify->getMittente()." ";
+    echo "hai ricevuto una notifica da ".$notify->getDestinatario()."<br/>";
+    echo $notify->getTitolo()."<br/>";
+    echo $notify->getMessaggio()."<br/>";
+    if($notify->getEventoClick()){
+        echo 'La notifica è stata letta <br/>';
+    }
+    else{
+        echo 'Hai 1 notifica non letta <br/>';
+    }
+    echo $notify->getIcona();
 ?>
 
 <!DOCTYPE html>
