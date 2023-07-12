@@ -3,8 +3,8 @@
         protected $notificaLettura;
         protected $rispostaAccettata;
 
-        public function __construct($mittente, $destinatari, $titolo, $messaggio, $notificaLettura, $rispostaAccettata){
-            parent::__construct($mittente, $destinatari, $titolo, $messaggio);
+        public function __construct($mittente, $destinatario, $titolo, $messaggio, $notificaLettura, $rispostaAccettata){
+            parent::__construct($mittente, $destinatario, $titolo, $messaggio);
             $this->notificaLettura = $notificaLettura;
             $this->rispostaAccettata = $rispostaAccettata;
         }

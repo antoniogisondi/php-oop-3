@@ -3,8 +3,8 @@
         protected $icona;
         protected $eventoClick;
 
-        public function __construct($mittente, $destinatari, $titolo, $messaggio, $icona, $eventoClick){
-            parent::__construct($mittente, $destinatari, $titolo, $messaggio);
+        public function __construct($mittente, $destinatario, $titolo, $messaggio, $icona, $eventoClick){
+            parent::__construct($mittente, $destinatario, $titolo, $messaggio);
             $this->icona = $icona;
             $this->eventoClick = $eventoClick;
         }
