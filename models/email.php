@@ -24,5 +24,17 @@
         public function getNotificaConsegna(){
             return $this->notificaConsegna;
         }
+
+        public function inoltro(){
+            return 'Email inoltrata';
+        }
+
+        public function stampa(){
+            return 'Email stampata';
+        }
+
+        public function invio(){
+            return 'Email inviata correttamente';
+        }
     }
 ?>
