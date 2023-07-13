@@ -5,6 +5,7 @@
         private String $destinatario;
         private String $titolo;
         private String $messaggio;
+        public static $notification = 'DRIN DRUN';
 
         // DEFINISCO IL COSTRUTTORE
         public function __construct(String $mittente, String $destinatario, String $titolo, String $messaggio){

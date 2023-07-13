@@ -2,6 +2,8 @@
     class SMS extends Comunicazione {
         private Bool $notificaLettura;
         private Bool $rispostaAccettata;
+        public static $ledColor = 'yellow';
+        public static $notification = 'DRIN DRIN DRUUN';
 
         public function __construct(String $mittente, String $destinatario, String $titolo, String $messaggio, Bool $notificaLettura, Bool $rispostaAccettata){
             parent::__construct($mittente, $destinatario, $titolo, $messaggio);

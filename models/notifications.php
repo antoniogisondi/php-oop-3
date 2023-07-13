@@ -2,6 +2,8 @@
     class Notifiche_PUSH extends Comunicazione {
         private Bool $eventoClick;
         private String $icona;
+        public static $ledColor = 'green';
+        public static $notification = 'TURU TU TU TU';
 
         public function __construct(String $mittente, String $destinatario, String $titolo, String $messaggio, Bool $eventoClick, String $icona){
             parent::__construct($mittente, $destinatario, $titolo, $messaggio);
